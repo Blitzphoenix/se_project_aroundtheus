@@ -10,22 +10,29 @@
   line-height: 20px;
   background-color: black;
   color: white;
+
 }
+
 .page__content{
   margin-left: 200px;
   margin-right: 200px;
 }
+
+
+
+
 .header{
   margin-top: 45px;
   max-width: 880px;
   border-bottom: 1px solid #545454;
 }
-.header__logo{}
+
 
 .profile{
   display: flex;
   align-items: center;
-  margin-top: 40px;
+  margin: 40px auto;
+
 }
 .profile__image{
   width: 120px;
@@ -76,7 +83,7 @@ margin: 0;
   height: 50px;
   border-radius: 2px 0px 0px 0px;
   border: 2px solid #FFFFFF;
-  margin-left: auto;
+  margin-left: 165px;
   align-self: center;
 }
 .profile__add-button:hover {
@@ -85,27 +92,90 @@ margin: 0;
 }
 
 .cards{
-
-
+  opacity: 0px;
+  color:black;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29.05px;
+  text-align: left;
 }
 
 .cards__list{
 display: grid;
-
+grid-gap:  20px 17px ;
+grid-template-columns: repeat( auto-fit , 282px);
+padding: 0;
+margin:0;
+list-style-type: none;
 }
 
 .card{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.card__description{
   background-color: #FFFFFF;
-  border-radius: 10px 10px 0px 0px;
-  opacity: 0px;
-
+  padding: 25px 20px 25px 20px ;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0 0 10px 10px;
 }
 
-.card__image{
-  height: 282px;
-  width: 282px;
+.card__like-button{
+  background: transparent url(../images/VectorLike.svg) center no-repeat;
+  width: 21px;
+  height: 18px;
+  border: none;
+}
+.card__like-button:hover{
+  opacity: 60%;
 }
 
-.card__description{}
 
-.card__like-button{}
+@media screen and (max-width:480px) {
+  .page{
+    min-width: calc(100% - 40px );
+  }
+  .page__content{
+    margin: auto;
+  }
+.header{
+  margin-top: 20px;
+}
+
+.header__logo{
+margin-left: 27px;
+}
+
+.profile{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 19px ;
+  margin-left: 19px ;
+}
+.profile__info{
+  margin-top: 30px;
+}
+.profile__name{
+  text-align: center;
+}
+.profile__description{
+  text-align: center;
+  margin-top: 14px;
+}
+
+.profile__add-button{
+  margin: 36px auto;
+  width: 100%;
+}
+
+.cards__list{
+  grid-template-columns:  282px;
+  justify-content: center;
+}
+}
