@@ -1,0 +1,29 @@
+
+.card{
+  display: flex;
+  flex-direction: column;
+}
+
+.card__description{
+  background-color: #FFFFFF;
+  padding: 25px 20px 25px 20px ;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0 0 10px 10px;
+}
+.card__title{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+}
+.card__like-button{
+  background: transparent url(../images/VectorLike.svg) center no-repeat;
+  width: 21px;
+  height: 18px;
+  border: none;
+}
+.card__like-button:hover{
+  opacity: 60%;
+}

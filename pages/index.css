@@ -1,6 +1,12 @@
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts.css);
 
+@import url(../blocks/page.css);
+@import url(../blocks/header.css);
+@import url(../blocks/profile.css);
+@import url(../blocks/cards.css);
+@import url(../blocks/card.css);
+/*
 .page {
   min-width: 1100px;
   max-width: 1600px;
@@ -10,7 +16,6 @@
   line-height: 20px;
   background-color: black;
   color: white;
-
 }
 
 .page__content{
@@ -32,7 +37,6 @@
   display: flex;
   align-items: center;
   margin: 40px auto;
-
 }
 .profile__image{
   width: 120px;
@@ -49,7 +53,7 @@
   margin-left: 30px;
 }
 .profile__name{
-margin: 0;
+  margin: 0;
   font-family: Inter , Arial, Helvetica, sans-serif;
   font-size: 42px;
   font-weight: 500;
@@ -58,13 +62,17 @@ margin: 0;
   grid-area: title;
 }
 .profile__description{
-margin: 0;
+  margin: 0;
   font-family: Inter , Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.78px;
   text-align: left;
   grid-area: description;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 373px;
 }
 .profile__edit-button{
   background: transparent url(../images/Vector-edit.svg) center no-repeat;
@@ -88,7 +96,6 @@ margin: 0;
 }
 .profile__add-button:hover {
   opacity: 60%;
-
 }
 
 .cards{
@@ -102,18 +109,17 @@ margin: 0;
 }
 
 .cards__list{
-display: grid;
-grid-gap:  20px 17px ;
-grid-template-columns: repeat( auto-fit , 282px);
-padding: 0;
-margin:0;
-list-style-type: none;
+  display: grid;
+  grid-gap:  20px 17px ;
+  grid-template-columns: repeat( auto-fit , 282px);
+  padding: 0;
+  margin:0;
+  list-style-type: none;
 }
 
 .card{
   display: flex;
   flex-direction: column;
-
 }
 
 .card__description{
@@ -124,7 +130,12 @@ list-style-type: none;
   justify-content: space-between;
   border-radius: 0 0 10px 10px;
 }
-
+.card__title{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+}
 .card__like-button{
   background: transparent url(../images/VectorLike.svg) center no-repeat;
   width: 21px;
@@ -135,10 +146,10 @@ list-style-type: none;
   opacity: 60%;
 }
 
-
+*/
 @media screen and (max-width:480px) {
   .page{
-    min-width: calc(100% - 40px );
+    min-width: 320px;
   }
   .page__content{
     margin: auto;
@@ -148,7 +159,7 @@ list-style-type: none;
 }
 
 .header__logo{
-margin-left: 27px;
+  margin-left: 27px;
 }
 
 .profile{
@@ -163,15 +174,32 @@ margin-left: 27px;
 }
 .profile__name{
   text-align: center;
+  font-family: Inter,Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 26.63px;
 }
 .profile__description{
-  text-align: center;
   margin-top: 14px;
+  font-family: Inter,Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.94px;
+  text-align: center;
+
 }
 
 .profile__add-button{
   margin: 36px auto;
   width: 100%;
+}
+.cards{
+  font-family: Inter,Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29.05px;
+  text-align: left;
+
 }
 
 .cards__list{
