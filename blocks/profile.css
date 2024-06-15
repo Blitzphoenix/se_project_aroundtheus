@@ -1,8 +1,9 @@
 
 .profile{
   display: flex;
-  align-items: center;
+  justify-content: center;
   margin: 40px auto;
+  align-items: center;
 }
 .profile__image{
   width: 120px;

@@ -1,7 +1,5 @@
-
-
 .header{
-  margin-top: 45px;
+  margin: 45px auto;
   max-width: 880px;
   border-bottom: 1px solid #545454;
 }
