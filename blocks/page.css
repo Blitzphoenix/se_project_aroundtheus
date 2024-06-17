@@ -1,14 +1,32 @@
 .page {
-  max-width: 1600px;          /* min-width was causing horzontal scroll on 1000px+ screens */
   margin: 0;
   font-family: "Inter", Arial, sans-serif;
   font-size: 16px;
   line-height: 20px;
   background-color: black;
   color: white;
+  display: flex;
+  justify-content:center ;
 }
 
 .page__content{
-  margin-left: 200px;
-  margin-right: 200px;
+  max-width: 1600px;
+}
+
+
+@media screen and (min-width:900px) {
+  .page__content{
+    min-width: 900px;
+    margin: 0;
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .page{
+    min-width: 320px;
+  }
+  .page__content{
+    margin: auto;
+  }
 }

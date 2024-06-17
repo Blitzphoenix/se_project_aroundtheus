@@ -2,6 +2,8 @@
 .card{
   display: flex;
   flex-direction: column;
+  border-radius: 10px;   /* moving border radius from card to here as asked*/
+  overflow: hidden;
 }
 
 .card__description{
@@ -10,7 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: 0 0 10px 10px;
+
 }
 .card__title{
   text-overflow: ellipsis;
@@ -23,7 +25,8 @@
   width: 21px;
   height: 18px;
   border: none;
+  cursor: pointer;
 }
 .card__like-button:hover{
-  opacity: 60%;
+  opacity: 0.5;
 }
