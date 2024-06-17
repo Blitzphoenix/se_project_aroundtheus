@@ -20,6 +20,19 @@ The way you'll do this at work is by exporting images directly from Figma — we
   
 Good luck and have fun!
 
+** Project Name**
+
+Around The U.S
+
+** Project Description**
+
+Aroundthus is an interactive page where users can add and remove photos like photos of other users. it uses grid and flexbox to make the page responsive to the users device screen making sure the project looks good on any device.
+
+** Project Future **
+
+profile editing and adding more profiles
+
+
 
 ** Project Video**
 
