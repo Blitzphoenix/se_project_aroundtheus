@@ -24,6 +24,9 @@ height: 282px;
   white-space: nowrap;
   overflow: hidden;
   margin: 0;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29.05px; /* added as asked */
 }
 .card__like-button{
   background: transparent url(../images/VectorLike.svg) center no-repeat;
