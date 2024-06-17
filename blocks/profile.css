@@ -78,7 +78,7 @@
     flex-direction: column;
     margin-right: 19px ;
     margin-left: 19px ;
-    margin-bottom: 36px;
+    margin-bottom: 0;
   }
   .profile__info{
     margin-top: 30px;
