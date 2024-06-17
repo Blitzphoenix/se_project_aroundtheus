@@ -16,7 +16,7 @@
 
 @media screen and (min-width:900px) {
   .page__content{
-    min-width: 900px;
+    width: 100%; /* changed to width: 100% as asked */
     margin: 0;
     margin-left: 200px;
     margin-right: 200px;
