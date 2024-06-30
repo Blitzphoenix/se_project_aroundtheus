@@ -1,0 +1,58 @@
+.model{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29.05px;
+  text-align: left;
+  color: black;
+  background-color: rgb(0 , 0 , 0 , .5);
+  padding: 0 19px;
+}
+
+.model__open{
+display: flex;
+}
+
+.model__container{
+  background-color: white;
+  padding: 36px;
+  border-radius: 10px;
+}
+
+.model__form{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.model__close{
+  background-image: url(../images/IconClose.svg);
+  background-size: contain;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: -45px;
+  right: -45px;
+}
+
+
+@media screen and (max-width: 580px) {
+.model__close{
+  width: 26px;
+  height: 26px;
+  right: 0px;
+  top: 35px;
+}
+}
