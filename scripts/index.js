@@ -25,3 +25,13 @@ const card6= {
 
 let initialCards = [card1 , card2 , card3 , card4 , card5 , card6]
 
+
+const editButton = document.querySelector("#edit-button");
+const model = document.querySelector(".model");
+
+
+editButton.addEventListener("click", () => {
+  model.classList.add("model__open")
+})
+
+
