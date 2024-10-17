@@ -22,17 +22,63 @@
 display: flex;
 }
 
+
+
 .model__container{
   background-color: white;
-  padding: 36px;
   border-radius: 10px;
+  position: relative;
+  width: 430px;
+  height: 330px;
 }
 
 .model__form{
   display: flex;
   flex-direction: column;
-
+  margin: 36px;
 }
+
+.model__heading{
+  margin: 0;
+  width: 330px;
+height: 23px;
+font-family: Inter;
+font-size: 24px;
+font-weight: 900;
+line-height: 29.05px;
+text-align: left;
+}
+
+.model__form_name{
+  width: 358px;
+  height: 27.26px;
+  opacity: 0px;
+  margin-top: 55px;
+  border: 1px solid #000000;
+}
+.model__form_description{
+  width: 358px;
+  height: 27.26px;
+  border: 1px solid #000000;
+  opacity: 0px;
+  margin-top: 30px;
+}
+
+
+.model__button{
+width: 358px;
+height: 50px;
+margin-top: 50px;
+border-radius: 2px 0px 0px 0px;
+opacity: 0px;
+background-color: black;
+font-family: Inter;
+font-size: 18px;
+line-height: 21.78px;
+text-align: center;
+color: #fff;
+}
+
 
 .model__close{
   background-image: url(../images/IconClose.svg);
@@ -42,7 +88,7 @@ display: flex;
   border: none;
   width: 40px;
   height: 40px;
-  position: relative;
+  position: absolute;
   top: -45px;
   right: -45px;
 }
