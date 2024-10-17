@@ -4,7 +4,7 @@ const card1= {
   }
 const card2= {
   name: "Lake Louise",
-  link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lake-louise.jpg  ",
+  link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lake-louise.jpg",
   }
 const card3= {
   name: "Bald Mountains",
