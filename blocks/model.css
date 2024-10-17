@@ -30,11 +30,12 @@ display: flex;
   position: relative;
   width: 430px;
   height: 330px;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .model__form{
-  display: flex;
-  flex-direction: column;
   margin: 36px;
 }
 
@@ -53,7 +54,7 @@ text-align: left;
   width: 358px;
   height: 27.26px;
   opacity: 0px;
-  margin-top: 55px;
+  margin: 55px 0 0 0;
   border: 1px solid #000000;
 }
 .model__form_description{
@@ -61,7 +62,7 @@ text-align: left;
   height: 27.26px;
   border: 1px solid #000000;
   opacity: 0px;
-  margin-top: 30px;
+  margin: 30px 0 0 0;
 }
 
 
