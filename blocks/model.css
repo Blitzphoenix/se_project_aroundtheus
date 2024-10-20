@@ -1,4 +1,4 @@
-.model{
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -14,17 +14,17 @@
   line-height: 29.05px;
   text-align: left;
   color: black;
-  background-color: rgb(0 , 0 , 0 , .5);
+  background-color: rgb(0, 0, 0, .5);
   padding: 0 19px;
 }
 
-.model__open{
-display: flex;
+.modal_open {
+  display: flex;
 }
 
 
 
-.model__container{
+.modal__container {
   background-color: white;
   border-radius: 10px;
   position: relative;
@@ -35,53 +35,51 @@ display: flex;
 
 }
 
-.model__form{
+.modal__form {
   margin: 36px;
 }
 
-.model__heading{
+.modal__heading {
   margin: 0;
   width: 330px;
-height: 23px;
-font-family: Inter;
-font-size: 24px;
-font-weight: 900;
-line-height: 29.05px;
-text-align: left;
+  height: 23px;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29.05px;
+  text-align: left;
 }
 
-.model__form_name{
+.modal__input {
   width: 358px;
   height: 27.26px;
   opacity: 0px;
   margin: 55px 0 0 0;
   border: 1px solid #000000;
 }
-.model__form_description{
-  width: 358px;
-  height: 27.26px;
-  border: 1px solid #000000;
-  opacity: 0px;
+
+
+.modal__input:last-of-type {
   margin: 30px 0 0 0;
 }
 
 
-.model__button{
-width: 358px;
-height: 50px;
-margin-top: 50px;
-border-radius: 2px 0px 0px 0px;
-opacity: 0px;
-background-color: black;
-font-family: Inter;
-font-size: 18px;
-line-height: 21.78px;
-text-align: center;
-color: #fff;
+.modal__button {
+  width: 358px;
+  height: 50px;
+  margin-top: 50px;
+  border-radius: 2px 0px 0px 0px;
+  opacity: 0px;
+  background-color: black;
+  font-family: Inter;
+  font-size: 18px;
+  line-height: 21.78px;
+  text-align: center;
+  color: #fff;
 }
 
 
-.model__close{
+.modal__close {
   background-image: url(../images/IconClose.svg);
   background-size: contain;
   background-color: transparent;
@@ -96,10 +94,10 @@ color: #fff;
 
 
 @media screen and (max-width: 580px) {
-.model__close{
-  width: 26px;
-  height: 26px;
-  right: 0px;
-  top: 35px;
-}
+  .modal__close {
+    width: 26px;
+    height: 26px;
+    right: 0px;
+    top: 35px;
+  }
 }

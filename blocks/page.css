@@ -6,27 +6,30 @@
   background-color: black;
   color: white;
   display: flex;
-  justify-content:center ;
+  justify-content: center;
 }
 
-.page__content{
+.page__content {
   max-width: 1280px;
 }
 
 
 @media screen and (min-width:900px) {
-  .page__content{
-    width: 100%; /* changed to width: 100% as asked */
+  .page__content {
+    width: 100%;
+    /* changed to width: 100% as asked */
     margin: 0;
     margin-left: 200px;
     margin-right: 200px;
   }
 }
+
 @media screen and (max-width: 580px) {
-  .page{
+  .page {
     min-width: 320px;
   }
-  .page__content{
+
+  .page__content {
     margin: auto;
   }
 }
