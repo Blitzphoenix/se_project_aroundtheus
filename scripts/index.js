@@ -23,32 +23,68 @@ const card6 = {
   link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lago.jpg",
 };
 
+
 const initialCards = [card1, card2, card3, card4, card5, card6];
 
 const editButton = document.querySelector("#edit-button");
-const closeButton = document.querySelector("#close-button");
+const addButton = document.querySelector("#add-button");
+const editcloseButton = document.querySelector("#edit-profile-close-button");
+const addcloseButton = document.querySelector("#add-profile-close-button");
 const modal = document.querySelector(".modal");
-const modalForm = modal.querySelector(".modal__form");
+const editmodal = document.querySelector("#edit-profile-modal");
+const addmodal = document.querySelector("#add-card-modal")
+const editmodalForm = editmodal.querySelector(".modal__form_edit");
+const addmodalForm = addmodal.querySelector(".modal__form_add");
+
+const imagemodal=document.querySelector("#card-image-modal");
+const imagemodalsrc=document.querySelector(".modal__image");
+const imagemodalname=document.querySelector(".modal__title");
+const imageclosebutton = imagemodal.querySelector(".modal__close")
 
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 const editProfileName = document.querySelector("#name");
 const editProfileDescription = document.querySelector("#description");
 
+
+const cardtitle = addmodal.querySelector("#card-title");
+const cardurl = addmodal.querySelector("#card-url");
+
+
 const cardTemplate =
   document.querySelector("#card-template").content.firstElementChild;
 const cardList = document.querySelector(".cards__list");
 
 function closePopup() {
-  modal.classList.remove("modal_open");
+  editmodal.classList.remove("modal_open");
+  addmodal.classList.remove("modal_open");
+  imagemodal.classList.remove("modal_open");
 }
 
 function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardTitleEl = cardElement.querySelector(".card__title");
+  const likebutton = cardElement.querySelector(".card__like-button");
+  const deletebutton = cardElement.querySelector(".card__delete-button");
+  const image = cardElement.querySelector(".card__image")
 
-  cardTitleEl.textContent = cardData.name;
+  likebutton.addEventListener("click",()=>{
+  likebutton.classList.toggle("card__like-button_active");
+});
+
+deletebutton.addEventListener("click",()=>{
+cardElement.remove();
+});
+
+image.addEventListener("click",()=>{
+  imagemodal.classList.add("modal_open");
+  imagemodalsrc.src = cardData.link;
+  imagemodalsrc.alt = cardData.name;
+  imagemodalname.textContent= cardData.name;
+  });
+
+cardTitleEl.textContent = cardData.name;
   cardImageEl.src = cardData.link;
   cardImageEl.alt = cardData.name;
   return cardElement;
@@ -57,19 +93,43 @@ function getCardElement(cardData) {
 editButton.addEventListener("click", () => {
   editProfileName.value = profileName.textContent;
   editProfileDescription.value = profileDescription.textContent;
-  modal.classList.add("modal_open");
+  editmodal.classList.add("modal_open");
 });
 
-closeButton.addEventListener("click", closePopup);
-modalForm.addEventListener("submit", (e) => {
+addButton.addEventListener("click", () => {
+
+  addmodal.classList.add("modal_open");
+});
+
+editcloseButton.addEventListener("click", closePopup);
+
+addcloseButton.addEventListener("click", closePopup);
+
+imageclosebutton.addEventListener("click", closePopup);
+
+editmodalForm.addEventListener("submit", (e) => {
   e.preventDefault();
   profileName.textContent = editProfileName.value;
   profileDescription.textContent = editProfileDescription.value;
   closePopup();
+
 });
+
+addmodalForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const name=cardtitle.value;
+  const link=cardurl.value;
+  const cardElement = getCardElement({name , link});
+  cardList.prepend(cardElement)
+  closePopup();
+});
+
+
 
 initialCards.forEach((cardData) => {
   const cardElement = getCardElement(cardData);
-
   cardList.append(cardElement);
 });
+
+
+
