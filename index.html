@@ -23,7 +23,7 @@
           <button type="button" class="profile__edit-button" id="edit-button"></button>
           <p class="profile__description"> Explorer </p>
         </div>
-        <button type="button" class="profile__add-button"  id="add-button"></button>
+        <button type="button" class="profile__add-button" id="add-button"></button>
       </section>
       <section class="cards">
         <ul class="cards__list">
@@ -39,11 +39,12 @@
   <div class="modal" id="edit-profile-modal">
     <div class="modal__container">
       <button class="modal__close" id="edit-profile-close-button"></button>
-      <form class="modal__form modal__form_edit" >
+      <form class="modal__form modal__form_edit">
         <p class="modal__heading">Edit Profile</p>
         <input class="modal__input modal__input_type_name" id="name" type="text" name="name" placeholder="Name">
-        <input class="modal__input modal__input_type_description" id="description" type="text" name="description" placeholder="description">
-        <button class="modal__button" id="save-button">Save</button>
+        <input class="modal__input modal__input_type_description" id="description" type="text" name="description"
+          placeholder="description">
+        <button class="modal__button" id="edit-save-button">Save</button>
       </form>
     </div>
   </div>
@@ -52,17 +53,18 @@
   <div class="modal" id="add-card-modal">
     <div class="modal__container">
       <button class="modal__close" id="add-profile-close-button"></button>
-      <form class="modal__form modal__form_add" >
+      <form class="modal__form modal__form_add">
         <p class="modal__heading">New Place</p>
-        <input class="modal__input modal__input_type_title" id="card-title" type="text" name="Title" placeholder="Title">
+        <input class="modal__input modal__input_type_title" id="card-title" type="text" name="Title"
+          placeholder="Title">
         <input class="modal__input modal__input_type_url" id="card-url" type="text" name="url" placeholder="image url">
-        <button class="modal__button" id="save-button">Save</button>
+        <button class="modal__button" id="add-save-button">Save</button>
       </form>
     </div>
   </div>
 
   <div class="modal" id="card-image-modal">
-    <div class="modal__container">
+    <div class="modal__container modal__container_image">
       <button class="modal__close" id="modal-image-close-button"></button>
       <img src="" class="modal__image" alt="">
       <p class="modal__title"></p>

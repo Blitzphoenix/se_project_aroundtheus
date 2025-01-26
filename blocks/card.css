@@ -1,35 +1,38 @@
-
-.card{
+.card {
   display: flex;
   flex-direction: column;
-  border-radius: 10px;   /* moving border radius from card to here as asked*/
+  border-radius: 10px;
+  /* moving border radius from card to here as asked*/
   overflow: hidden;
   position: relative;
 }
 
-.card__image{
-width: 282px;
-height: 282px;
+.card__image {
+  width: 282px;
+  height: 282px;
 }
 
-.card__description{
+.card__description {
   background-color: #FFFFFF;
-  padding: 25px 20px 25px 20px ;
+  padding: 25px 20px 25px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
 }
-.card__title{
+
+.card__title {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   margin: 0;
   font-size: 24px;
   font-weight: 900;
-  line-height: 29.05px; /* added as asked */
+  line-height: 29.05px;
+  /* added as asked */
 }
-.card__like-button{
+
+.card__like-button {
   background: transparent url(../images/VectorLike.svg) center no-repeat;
   width: 21px;
   height: 18px;
@@ -37,16 +40,17 @@ height: 282px;
   cursor: pointer;
   padding: 10px;
 }
-.card__like-button_active{
-background-image: url(../images/Vector-like-active.svg);
+
+.card__like-button_active {
+  background-image: url(../images/Vector-like-active.svg);
 }
 
 
-.card__like-button:hover{
+.card__like-button:hover {
   opacity: 0.5;
 }
 
-.card__delete-button{
+.card__delete-button {
   background: transparent url(../images/Delete.svg) center no-repeat;
   width: 18px;
   height: 19px;
@@ -54,11 +58,10 @@ background-image: url(../images/Vector-like-active.svg);
   cursor: pointer;
   padding: 10px;
   position: absolute;
-  top:18px;
+  top: 18px;
   right: 15px;
 }
 
-.card__delete-button:hover{
+.card__delete-button:hover {
   background-image: url(../images/delete-hover.svg);
 }
-

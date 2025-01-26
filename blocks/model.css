@@ -5,7 +5,7 @@
   bottom: 0;
   right: 0;
   z-index: 999;
-  display: none;
+
   align-items: center;
   justify-content: center;
   font-family: Inter;
@@ -16,11 +16,24 @@
   color: black;
   background-color: rgb(0, 0, 0, .5);
   padding: 0 19px;
+
+
+  overflow: hidden;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s ease-in;
 }
+
 
 .modal_open {
   display: flex;
+  visibility: visible;
+  height: auto;
+  opacity: 1;
 }
+
+
 
 
 
@@ -32,7 +45,10 @@
   height: 330px;
   display: flex;
   flex-direction: column;
+}
 
+.modal__container_image {
+  background: none;
 }
 
 .modal__form {
@@ -102,7 +118,7 @@
   right: -45px;
 }
 
-.modal__title{
+.modal__title {
   font-family: Inter;
   font-size: 12px;
   font-weight: 400;
